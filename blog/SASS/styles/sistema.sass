@@ -6,7 +6,7 @@ $gray: gray
 $orange: orange
 $blue: blue
 $red: red
-$brown: brown 
+$brown: brown
 $light-blue: #9be4e4
 $light-gray: rgba(255, 255, 255, 0.3)
 $shadow: 0 0 5em $white
@@ -17,9 +17,7 @@ $jupiter: #946446
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap')
 
 *
-
-    font-family: 'Roboto', sans-serif
-
+  font-family: 'Roboto', sans-serif
 
 @mixin orbita($size, $animation-time)
   width: $size
@@ -74,41 +72,41 @@ $jupiter: #946446
   box-shadow: $shadow
 
 .orbita.mercurio
-  @include orbita(9em, 0) 
+  @include orbita(9em, 0)
 
 .planeta.mercurio
   @include planeta(0.5em, $gray, 10s, "mercurio")
 
 .orbita.venus
-  @include orbita(11.5em, 0) 
+  @include orbita(11.5em, 0)
 .planeta.venus
   @include planeta(1em, $orange, 15s, "venus")
 
 .orbita.tierra
-  @include orbita(15em, 0) 
+  @include orbita(15em, 0)
 .planeta.tierra
   @include planeta(1.3em, $blue, 20s, "tierra")
 
 .luna
-  @include planeta(0.25em, $gray, 2s, "luna") 
+  @include planeta(0.25em, $gray, 2s, "luna")
 
 .orbita.marte
-  @include orbita(18.5em, 0) 
+  @include orbita(18.5em, 0)
 .planeta.marte
   @include planeta(1.5em, $red, 25s, "marte")
 
 .orbita.jupiter
-  @include orbita(24em, 0) 
+  @include orbita(24em, 0)
 .planeta.jupiter
   @include planeta(2.5em, $jupiter, 40s, "jupiter")
 
 .orbita.saturno
-  @include orbita(31em, 0) 
+  @include orbita(31em, 0)
 .planeta.saturno
-  @include planeta(2.3em, $saturn, 60s, "saturno") 
+  @include planeta(2.3em, $saturn, 60s, "saturno")
 
 .orbita.urano
-  @include orbita(38em, 0) 
+  @include orbita(38em, 0)
 
 .planeta.urano
   @include planeta(1.8em, $light-blue, 80s, "urano") // Tamaño ajustado para mayor visibilidad
@@ -117,7 +115,6 @@ $jupiter: #946446
   @include orbita(44em, 0)
 .planeta.neptuno
   @include planeta(1.7em, $neptuno, 100s, "neptuno")
-
 
 @keyframes orbit-mercurio
   from
@@ -165,7 +162,7 @@ $jupiter: #946446
   from
     transform: rotate(0deg) translateX(15em)
   to
-    transform: rotate(360deg) translateX(15em)      
+    transform: rotate(360deg) translateX(15em)
 
 @keyframes orbit-urano
   from
@@ -178,5 +175,3 @@ $jupiter: #946446
     transform: rotate(0deg) translateX(21em)
   to
     transform: rotate(360deg) translateX(21em)
-
-    

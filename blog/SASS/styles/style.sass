@@ -8,13 +8,13 @@ body
   background-color: #287599
 
 .contenedor
-    background-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.62)50%, black 100%), url('../img/universo.jpeg')
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-    overflow: hidden
+  background-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.62)50%, black 100%), url('../img/universo.jpeg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  overflow: hidden
 
-.contenedor-universo 
+.contenedor-universo
   width: 70%
   margin: 0 auto
   display: flex
@@ -24,7 +24,7 @@ body
   gap: 300px
 
 .sistema-solar.planeta,
-.sistema-solar.orbitas 
+.sistema-solar.orbitas
   position: relative
   max-width: 215px
   right: 0
@@ -32,7 +32,7 @@ body
   bottom: 0
   top: 0
 
-.universo-info 
+.universo-info
   position: relative
   padding: 50px
   text-align: center
@@ -41,22 +41,21 @@ body
   top: 6rem
   right: 6rem
 
-
-.btn-info 
+.btn-info
   margin-top: 30px
 
-.btn-info a 
+.btn-info a
   background-color: rgb(248, 194, 0)
   border: 2px solid rgb(248, 194, 0)
   border-radius: 10px
   padding: 10px
   color: black
 
-.btn-info a:hover 
+.btn-info a:hover
   background-color: transparent
   color: white
 
-ul 
+ul
   list-style: none
   padding-left: 0
 
@@ -67,14 +66,14 @@ footer
   margin-bottom: 0
 
 footer h1
-  text-align: center    
+  text-align: center
 
-@media (min-width: 768px) 
-  .contenedor-universo 
+@media (min-width: 768px)
+  .contenedor-universo
     flex-direction: column
     flex-direction: row
 
-  .universo-info 
+  .universo-info
     width: 100%
     margin: 0 auto
     padding: 20px
@@ -83,53 +82,50 @@ footer h1
     justify-content: center
     right: 0
 
-  .sistema-solar 
+  .sistema-solar
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     margin: 20px 0
 
-
-
-@media (max-width: 480px) 
-  .universo-info 
+@media (max-width: 480px)
+  .universo-info
     right: 0
     padding: 10px
 
-  .sistema-solar 
+  .sistema-solar
     height: 15%
     width: 15%
     padding: 15px
 
-  .contenedor-planetas 
+  .contenedor-planetas
     padding-top: 5px
     padding-bottom: 15px
 
-  .footer 
+  .footer
     padding: 5px
 
-@media (max-width: 770px) 
+@media (max-width: 770px)
   .universo-info,
   .sistema-solar,
-  .contenedor-planetas 
+  .contenedor-planetas
     left: 0px
     top: 0px
 
   .contenedor-universo
-    gap: 100px  
+    gap: 100px
 
-  .sistema-solar 
+  .sistema-solar
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     margin: 0 auto
     padding: 15px
-    
 
   .sistema-solar.planeta,
-  .sistema-solar.orbitas 
+  .sistema-solar.orbitas
     max-width: 50px
     width: 50px
     height: 50px
