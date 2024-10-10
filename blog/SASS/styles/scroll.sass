@@ -1,0 +1,116 @@
+.contenedor-planetas
+  padding-top: 40px
+  padding-bottom: 10px
+  margin-top: 350px
+  z-index: 1
+  position: relative
+
+.lista-planetas
+  width: 95%
+  margin: auto
+  display: flex
+  gap: 10px
+  overflow: hidden
+  position: relative
+
+.lista-planetas::-webkit-scrollbar
+  width: 0
+
+.lista-planetas li:hover
+  background-color: rgb(248,194,0)
+  cursor: pointer
+
+.lista-planetas li a img
+
+  width: 200px
+  height: 200px
+  padding: 30px
+
+.lista-planetas p
+  color: #f1f1f1
+  font-weight: bold
+  text-align: center
+
+.lista-planetas li
+  animation: scrollInfinito 15s linear infinite
+
+@keyframes scrollInfinito
+  0%
+    transform: translateX(0%)
+  
+  100%
+    transform: translateX(calc(-210px * 6))
+
+.lds-ripple
+  display: flex
+  position: relative
+  margin: auto
+  width: 100%
+  height: 100vh
+
+.lds-ripple div
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  margin: auto
+  border: 4px solid rgb(248,194,0)
+  opacity: 1
+  border-radius: 50%
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite
+
+.lds-ripple div:nth-child(2)
+  animation-delay: -0.5s
+
+@keyframes lds-ripple
+  0%
+    top: 36px
+    left: 36px
+    width: 0
+    height: 0
+    opacity: 0
+  
+  4.9%
+    top: 36px
+    left: 36px
+    width: 0
+    height: 0
+    opacity: 0
+  
+  5%
+    top: 36px
+    left: 36px
+    width: 0
+    height: 0
+    opacity: 1
+  
+  100%
+    top: 0px
+    left: 0px
+    width: 72px
+    height: 72px
+    opacity: 0
+
+@media (max-width: 768px)
+  .lista-planetas
+    display: flex
+    flex-wrap: nowrap
+    overflow-x: auto
+    justify-content: flex-start
+
+  .lista-planetas li
+    flex: 0 0 auto
+
+  .lista-planetas li img
+    width: 150px
+    height: 150px
+
+@media (max-width: 480px)
+  .lista-planetas 
+    flex-direction: column
+    gap: 30px
+
+  .lista-planetas li img
+    width: 100px
+    height: 100px

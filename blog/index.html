@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SASS/styles/nav.css">
+    <link rel="stylesheet" href="./SASS/styles/style.css">
+    <link rel="stylesheet" href="./SASS/styles/sistema.css">
+    <link rel="stylesheet" href="./SASS/styles/scroll.css">
+    <title>Sistema Solar</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="index.html">Sistema Solar</a></div>
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="planetas.html">Panetas</a></li>
+                <li><a href="#">Acerca de</a></li> 
+            </ul>
+            <a href=""></a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>             
+    </div>
+    <div class="contenedor" id="cont">
+        <aside class="universo">
+            <div class="contenedor-universo">
+                <div class="universo-info">
+                    <h1>Sistema Solar</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit maxime error sapiente vel
+                     consectetur voluptate! Est inventore ipsam possimus magni tempora architecto, ipsa sit dolorem, 
+                     beatae, quaerat vitae sint dignissimos.</p>
+                     <div class="btn-info">
+                        <a href="#">Leer mas</a>
+                     </div>
+                </div>
+                <div class="sistema-solar">
+                    <div class="sol"></div>
+                    <div class="orbita mercurio"></div>
+                    <div class="planeta mercurio"></div>
+                    <div class="orbita venus"></div>
+                    <div class="planeta venus"></div>
+                    <div class="orbita tierra"></div>
+                    <div class="planeta tierra"><div class="luna"></div></div>
+                    <div class="orbita marte"></div>
+                    <div class="planeta marte"></div>
+                    <div class="orbita jupiter"></div>
+                    <div class="planeta jupiter"></div>
+                    <div class="orbita saturno"></div>
+                    <div class="planeta saturno"></div>
+                    <div class="orbita urano"></div>
+                    <div class="planeta urano"></div>
+                    <div class="orbita neptuno"></div>
+                    <div class="planeta neptuno"></div>
+                </div>
+                
+            </div>
+            <main class="contenedor-planetas" id="contenedor-planetas">
+                <ul class="lista-planetas">
+                    <li>
+                        <a href="planetas.html" class="planeta-link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/sol.png" alt="Sol">
+                        </picture>
+                        <p>Sol</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/mercurio.png" alt="mercurio">
+                        </picture>
+                        <p>Mercurio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/venus.png" alt="venus">
+                        </picture>
+                        <p>Venus</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/tierra.png" alt="tierra">
+                        </picture>
+                        <p>Tierra</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/marte.png" alt="marte">
+                        </picture>
+                        <p>Marte</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/jupiter.png" alt="jupiter">
+                        </picture>
+                        <P>Jupiter</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/saturno.png" alt="saturno">
+                        </picture>
+                        <p>Saturno</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/urano.png" alt="urano">
+                        </picture>
+                        <p>Urano</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planetas.html" class="planeta_link">
+                        <picture>
+                            <img width="100" height="100" src="./planetas/neptuno.png" alt="Neptuno">                   
+                        </picture>
+                        <p>Neptuno</p>
+                        </a>
+                    </li>
+                </ul>
+            </main>
+        </aside>  
+    </div>   
+    
+    <div id="spinner" class="lds-ripple">
+        <div></div><div></div>
+    </div>
+    <footer>
+        <div class="mondongo">
+            <h1>esto es un footer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates in quam perferendis 
+                possimus voluptatibus fuga? Eius 
+                quis ut perferendis repudiandae hic dignissimos architecto quas, rerum suscipit sit 
+                eveniet officiis esse!</p>
+        </div>
+    </footer>
+</body>
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn')
+    const toggleBtnIcon = document.querySelector('.toggle-btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function (){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'    
+        : 'fa-solid fa-bars'    
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+        if(window.innerWidth > 768 ){
+            navegacion.classList.add('resposive--dinamico');
+        }
+    });
+    
+    window.addEventListener('load',()=>{
+        const contenedor = document.getElementById('contenedor');
+        const contenedorPlanetas = document.getElementById('contenedor-planetas');
+        const spinner = document.getElementById('spinner');
+        setTimeout(() => {
+            spinner.style.display = 'none';
+            contenedor.style.display='block'
+            contenedorPlanetas.style.display='block';
+        }, 2000);
+    });
+</script>
+</html>

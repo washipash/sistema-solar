@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #287599;
+}
+
+.contenedor {
+  background-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.62) 50%, black 100%), url("../img/universo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.contenedor-universo {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+}
+
+.sistema-solar.planeta,
+.sistema-solar.orbitas {
+  position: relative;
+  max-width: 215px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.universo-info {
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  top: 6rem;
+  right: 6rem;
+}
+
+.btn-info {
+  margin-top: 30px;
+}
+
+.btn-info a {
+  background-color: rgb(248, 194, 0);
+  border: 2px solid rgb(248, 194, 0);
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.btn-info a:hover {
+  background-color: transparent;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  background-color: rgb(38, 107, 84);
+  height: 90px;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+footer h1 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor-universo {
+    flex-direction: column;
+    flex-direction: row;
+  }
+  .universo-info {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+  }
+  .sistema-solar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .universo-info {
+    right: 0;
+    padding: 10px;
+  }
+  .sistema-solar {
+    height: 15%;
+    width: 15%;
+    padding: 15px;
+  }
+  .contenedor-planetas {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .footer {
+    padding: 5px;
+  }
+}
+@media (max-width: 770px) {
+  .universo-info,
+  .sistema-solar,
+  .contenedor-planetas {
+    left: 0px;
+    top: 0px;
+  }
+  .contenedor-universo {
+    gap: 100px;
+  }
+  .sistema-solar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .sistema-solar.planeta,
+  .sistema-solar.orbitas {
+    max-width: 50px;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

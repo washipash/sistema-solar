@@ -1,0 +1,182 @@
+// Variables
+$black: black
+$white: white
+$yellow: yellow
+$gray: gray
+$orange: orange
+$blue: blue
+$red: red
+$brown: brown 
+$light-blue: #9be4e4
+$light-gray: rgba(255, 255, 255, 0.3)
+$shadow: 0 0 5em $white
+$saturn: #b8924d
+$neptuno: #287599
+$jupiter: #946446
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap')
+
+*
+
+    font-family: 'Roboto', sans-serif
+
+
+@mixin orbita($size, $animation-time)
+  width: $size
+  height: $size
+  border: 1px dashed $light-gray
+  border-radius: 50%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin planeta($size, $color, $animation-time, $planeta)
+  width: $size
+  height: $size
+  background-color: $color
+  border-radius: 50%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  @if $planeta == "mercurio"
+    animation: orbit-mercurio $animation-time infinite linear
+  @else if $planeta == "venus"
+    animation: orbit-venus $animation-time infinite linear
+  @else if $planeta == "tierra"
+    animation: orbit-tierra $animation-time infinite linear
+  @else if $planeta == "luna"
+    animation: orbit-luna $animation-time infinite linear
+  @else if $planeta == "marte"
+    animation: orbit-marte $animation-time infinite linear
+  @else if $planeta == "jupiter"
+    animation: orbit-jupiter $animation-time infinite linear
+  @else if $planeta == "saturno"
+    animation: orbit-saturno $animation-time infinite linear
+  @else if $planeta == "urano"
+    animation: orbit-urano $animation-time infinite linear
+  @else if $planeta == "neptuno"
+    animation: orbit-neptuno $animation-time infinite linear
+
+// Estilos generales
+
+.sistema-solar
+  display: flex
+  top: 180px
+  right: 80px
+  position: relative
+  width: 20em
+  height: 20em
+
+.sol
+  @include planeta(6em, $yellow, 0, "sol")
+  box-shadow: $shadow
+
+.orbita.mercurio
+  @include orbita(9em, 0) 
+
+.planeta.mercurio
+  @include planeta(0.5em, $gray, 10s, "mercurio")
+
+.orbita.venus
+  @include orbita(11.5em, 0) 
+.planeta.venus
+  @include planeta(1em, $orange, 15s, "venus")
+
+.orbita.tierra
+  @include orbita(15em, 0) 
+.planeta.tierra
+  @include planeta(1.3em, $blue, 20s, "tierra")
+
+.luna
+  @include planeta(0.25em, $gray, 2s, "luna") 
+
+.orbita.marte
+  @include orbita(18.5em, 0) 
+.planeta.marte
+  @include planeta(1.5em, $red, 25s, "marte")
+
+.orbita.jupiter
+  @include orbita(24em, 0) 
+.planeta.jupiter
+  @include planeta(2.5em, $jupiter, 40s, "jupiter")
+
+.orbita.saturno
+  @include orbita(31em, 0) 
+.planeta.saturno
+  @include planeta(2.3em, $saturn, 60s, "saturno") 
+
+.orbita.urano
+  @include orbita(38em, 0) 
+
+.planeta.urano
+  @include planeta(1.8em, $light-blue, 80s, "urano") // Tamaño ajustado para mayor visibilidad
+
+.orbita.neptuno
+  @include orbita(44em, 0)
+.planeta.neptuno
+  @include planeta(1.7em, $neptuno, 100s, "neptuno")
+
+
+@keyframes orbit-mercurio
+  from
+    transform: rotate(0deg) translateX(4em)
+  to
+    transform: rotate(360deg) translateX(4em)
+
+@keyframes orbit-venus
+  from
+    transform: rotate(0deg) translateX(5em)
+  to
+    transform: rotate(360deg) translateX(5em)
+
+@keyframes orbit-luna
+  from
+    transform: rotate(0deg) translateX(1em)
+  to
+    transform: rotate(360deg) translateX(1em)
+
+@keyframes orbit-tierra
+  from
+    transform: rotate(0deg) translateX(7em)
+  to
+    transform: rotate(360deg) translateX(7em)
+
+@keyframes orbit-marte
+  from
+    transform: rotate(0deg) translateX(9em)
+  to
+    transform: rotate(360deg) translateX(9em)
+
+@keyframes orbit-jupiter
+  from
+    transform: rotate(0deg) translateX(11.3em)
+  to
+    transform: rotate(360deg) translateX(11.3em)
+
+@keyframes orbit-saturno
+  from
+    transform: rotate(0deg) translateX(15em)
+  to
+    transform: rotate(360deg) translateX(15em)
+
+@keyframes orbit-anillos-saturno
+  from
+    transform: rotate(0deg) translateX(15em)
+  to
+    transform: rotate(360deg) translateX(15em)      
+
+@keyframes orbit-urano
+  from
+    transform: rotate(0deg) translateX(18.5em)
+  to
+    transform: rotate(360deg) translateX(18.5em)
+
+@keyframes orbit-neptuno
+  from
+    transform: rotate(0deg) translateX(21em)
+  to
+    transform: rotate(360deg) translateX(21em)
+
+    
