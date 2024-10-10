@@ -12,7 +12,7 @@ $color-caja: rgba(255, 255, 255, 0.521)
     background-color: $color-caja
     width: $widht
     height: $height
-        
+
 @mixin estrella($height, $widht, $color-caja)
     display: flex
     flex-direction: row
@@ -22,73 +22,64 @@ $color-caja: rgba(255, 255, 255, 0.521)
     backdrop-filter: blur(15px)
     background-color: $color-caja
     width: $widht
-    height: $height 
+    height: $height
     margin: 0 auto
     justify-content: center
     align-items: center
     text-align: left
     margin-bottom: 40px
-       
+
 .planeta
     @include planeta($height, $widht, $color-caja)
-    
-body 
+
+body
     background-color: #287599
     display: flex
     flex-direction: column
     align-items: center
     min-height: 100vh
-    
-.estrella 
+
+.estrella
     @include estrella ($height, $widht, $color-caja)
 
 .contenedor
-    margin-top: 60px    
+    margin-top: 60px
 
-.planetas 
+.planetas
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 20px
     justify-items: center
     text-align: center
 
-    
-
 /* Estilo común para la imagen */
-.img-planeta, .sol 
+.img-planeta, .sol
     height: 100px
     width: 100px
     margin-right: 30px
 
-
 /* Contenedor para el texto del planeta y estrella */
-.texto 
+.texto
     display: flex
     flex-direction: column
     justify-content: flex-start
 
-
-.titulo 
+.titulo
     margin: 0 auto
     font-size: 24px
 
-
-.descripcion 
+.descripcion
     margin-top: 10px
 
-
 /* Responsivo para pantallas más pequeñas */
-@media (max-width: 768px) 
-    .planetas 
+@media (max-width: 768px)
+    .planetas
         grid-template-columns: 1fr
-    
 
     .planeta,
-    .estrella 
+    .estrella
         width: 100%
-    
 
-    .img-planeta, .sol 
+    .img-planeta, .sol
         height: 80px
         width: 80px
-    
